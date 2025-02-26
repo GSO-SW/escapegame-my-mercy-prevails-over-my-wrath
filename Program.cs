@@ -1,26 +1,59 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Das ist ein kleines Beispiel für ein (langweiliges) Exit Game. \nIhr könnt es besser, viel Spaß! ");
-Console.WriteLine("-----------------------------------------------------------------------");
-
-
-Console.WriteLine("Geisterspiel");
-int punkte = 0;
-bool gameover = false;
-Random random = new Random();
-while (gameover == false)
+﻿
 {
-    Console.WriteLine("Hinter einer Tür verbirgt sich ein Geist.\nWelche Tür wählst du? 1, 2 oder 3?");
-    int tuer = Convert.ToInt32(Console.ReadLine());
-    int geisterTuer = random.Next(1, 4);
-    if (tuer == geisterTuer)
-    {
-        Console.WriteLine("Game over! Hier ist ein Geist!");
-        Console.WriteLine("Deine Punkte: {0}", punkte);
-        gameover = true;
-    }
-    else
-    {
-        Console.WriteLine("Kein Geist gefunden!");
-        punkte = punkte + 1;
-    }
+    Gebaeude Polizeiwache = new Gebaeude ();
+	Polizeiwache.Nummer = 1;
+	Polizeiwache.Anwesenheit = true;
+	Polizeiwache.Zugang = true;
+	Polizeiwache.Zugaenge[0]=1;
+
+    Gebaeude Krankenhaus = new Gebaeude ();
+	Krankenhaus.Nummer = 2;
+	Krankenhaus.Anwesenheit = false;
+	Krankenhaus.Zugang = false;
+	Krankenhaus.Zugaenge[1]=2;
+
+    Gebaeude Bahnhaltestelle = new Gebaeude ();
+	Bahnhaltestelle.Nummer = 3;
+	Bahnhaltestelle.Anwesenheit = false;
+	Bahnhaltestelle.Zugang = false;
+	Bahnhaltestelle.Zugaenge[2]=3;
+
+    Gebaeude Schule = new Gebaeude ();
+	Schule.Nummer = 4;
+	Schule.Anwesenheit = false;
+	Schule.Zugang = false;
+	Schule.Zugaenge[3]=4;
+
+    Gebaeude Feuerwehrwache = new Gebaeude ();
+	Feuerwehrwache.Nummer = 5;
+	Feuerwehrwache.Anwesenheit = false;
+	Feuerwehrwache.Zugang = false;
+	Feuerwehrwache.Zugaenge[4]=5;
+
+    Gebaeude Obdachlosenlager = new Gebaeude ();
+	Obdachlosenlager.Nummer = 6;
+	Obdachlosenlager.Anwesenheit = false;
+	Obdachlosenlager.Zugang = false;
+	Obdachlosenlager.Zugaenge[5]=6;
+
+    Gebaeude Kino = new Gebaeude ();
+	Obdachlosenlager.Nummer = 7;
+	Obdachlosenlager.Anwesenheit = false;
+	Obdachlosenlager.Zugang = false;
+	Obdachlosenlager.Zugaenge[6]=7;
+
+    Gebaeude Schwimmbad = new Gebaeude ();
+	Obdachlosenlager.Nummer = 8;
+	Obdachlosenlager.Anwesenheit = false;
+	Obdachlosenlager.Zugang = false;
+	Obdachlosenlager.Zugaenge[7]=8;
+
+    Gebaeude Hafen = new Gebaeude ();
+	Obdachlosenlager.Nummer = 9;
+	Obdachlosenlager.Anwesenheit = false;
+	Obdachlosenlager.Zugang = false;
+	Obdachlosenlager.Zugaenge[8]=9;
+
+
+
 }
