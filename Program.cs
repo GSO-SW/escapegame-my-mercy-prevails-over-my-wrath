@@ -37,22 +37,22 @@
 	Obdachlosenlager.Zugaenge[5]=6;
 
     Gebaeude Kino = new Gebaeude ();
-	Obdachlosenlager.Nummer = 7;
-	Obdachlosenlager.Anwesenheit = false;
-	Obdachlosenlager.Zugang = false;
-	Obdachlosenlager.Zugaenge[6]=7;
+	Kino.Nummer = 7;
+	Kino.Anwesenheit = false;
+	Kino.Zugang = false;
+	Kino.Zugaenge[6]=7;
 
     Gebaeude Schwimmbad = new Gebaeude ();
-	Obdachlosenlager.Nummer = 8;
-	Obdachlosenlager.Anwesenheit = false;
-	Obdachlosenlager.Zugang = false;
-	Obdachlosenlager.Zugaenge[7]=8;
+	Schwimmbad.Nummer = 8;
+	Schwimmbad.Anwesenheit = false;
+	Schwimmbad.Zugang = false;
+	Schwimmbad.Zugaenge[7]=8;
 
     Gebaeude Hafen = new Gebaeude ();
-	Obdachlosenlager.Nummer = 9;
-	Obdachlosenlager.Anwesenheit = false;
-	Obdachlosenlager.Zugang = false;
-	Obdachlosenlager.Zugaenge[8]=9;
+	Hafen .Nummer = 9;
+	Hafen .Anwesenheit = false;
+	Hafen .Zugang = false;
+	Hafen .Zugaenge[8]=9;
 
 
 
