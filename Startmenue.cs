@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExitGame
 {
-    class Startmenue
+    class Startmenue : AbstractAction
     {
-        public void MenueAnzeigen()
+        public override void Execute()
         {
             // Gebäude und weitere Initialisierungen
 
