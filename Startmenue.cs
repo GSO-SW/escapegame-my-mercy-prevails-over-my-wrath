@@ -80,15 +80,17 @@ namespace ExitGame
         static void GebeEinleitung()
         {
             // Einführungstext
-            Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("                   INTRODUCTION                       ");
-            Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
-            Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
-            Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
-            Console.WriteLine("Jede Entscheidung könnte dein Schicksal besiegeln. Viel Glück!");
-            Console.WriteLine();
-            Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
+ Console.WriteLine("------------------------------------------------------");
+ Console.WriteLine("                   INTRODUCTION                       ");
+ Console.WriteLine("------------------------------------------------------");
+ Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
+ Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
+ Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
+ Console.WriteLine("Du spielst Rick Grimes einen Polizisten der alles für die Gerechtigkeit tut");
+ Console.WriteLine("Jedoch als du aufwachst an deinem Arbeitsplatz hast du was bemerkt...................");   
+ Console.WriteLine("Jede Entscheidung könnte dein Schicksal besiegeln also wähle weise. Viel Glück!");
+ Console.WriteLine();
+ Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
 
             // Auf Benutzereingabe warten, bevor das Spiel fortgesetzt wird
             Console.ReadKey();
