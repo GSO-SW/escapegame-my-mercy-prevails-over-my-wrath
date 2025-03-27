@@ -1,94 +1,81 @@
+using ExitGame;
 using System;
 
-class Program
+namespace ExitGame
 {
-    static void Main()
+    class Gebaeude
     {
-        // Gebäude und weitere Initialisierungen
+        public int Nummer;
+        public bool Anwesenheit;
+        public bool Zugang;
+        public int[] Zugaenge = new int[8]; // Array mit 8 Elementen
 
-        // Menü
-        string eingabe;
-        int eingabe_int;
-
-        while (true)
-        {
-            Console.Clear();
-            Console.WriteLine("Wählen Sie eine Option:");
-            Console.WriteLine("1. Spiel Starten");
-            Console.WriteLine("2. Programm schließen");
-            Console.Write("Eingabe: ");
-            eingabe = Console.ReadLine();
-
-            if (!int.TryParse(eingabe, out eingabe_int))
-            {
-                Console.WriteLine("Ungültige Eingabe. Bitte eine Zahl eingeben.");
-                Console.ReadKey();
-                continue;
-            }
-
-            if (eingabe_int == 1)
-            {
-                StarteSpiel();
-            }
-            else if (eingabe_int == 2)
-            {
-                Console.WriteLine("Programm wird beendet...");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Ungültige Option. Bitte erneut versuchen.");
-                Console.ReadKey();
-            }
-        }
+       
     }
-
-    static void StarteSpiel()
-    {
-        string eingabe;
-        int eingabe_int;
-
-        do
-        {
-            Console.Clear();
-            Console.WriteLine(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
-            Console.WriteLine("                                                     ");
-            Console.WriteLine("                     WELCOME TO                      ");
-            Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("                   YOUR LAST DAY                      ");
-            Console.WriteLine("                 Press 0 to continue                 ");
-            Console.WriteLine(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
-
-            eingabe = Console.ReadLine();
-
-        } while (!int.TryParse(eingabe, out eingabe_int) || eingabe_int != 0);
-
-        Console.Clear();
-
-        // Einführung nach dem Spielstart
-        GebeEinleitung();
-
-        // Danach kannst du das erste Level starten oder was auch immer kommt
-        // StarteErstesLevel();
-    }
-
-    static void GebeEinleitung()
-    {
-        // Einführungstext
-        Console.WriteLine("------------------------------------------------------");
-        Console.WriteLine("                   INTRODUCTION                       ");
-        Console.WriteLine("------------------------------------------------------");
-        Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
-        Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
-        Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
-        Console.WriteLine("Jede Entscheidung könnte dein Schicksal besiegeln. Viel Glück!");
-        Console.WriteLine();
-        Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
-
-        // Auf Benutzereingabe warten, bevor das Spiel fortgesetzt wird
-        Console.ReadKey();
-
-        // Jetzt Bildschirm löschen, bevor das Spiel fortgesetzt wird
-        Console.Clear();
-    }
+   
 }
+
+Gebaeude Polizeiwache = new Gebaeude();
+Polizeiwache.Nummer = 1;
+Polizeiwache.Anwesenheit = true;
+Polizeiwache.Zugang = true;
+Polizeiwache.Zugaenge[0] = 1; // Korrekte Initialisierung des Arrays
+
+Gebaeude Krankenhaus = new Gebaeude();
+Krankenhaus.Nummer = 2;
+Krankenhaus.Anwesenheit = false;
+Krankenhaus.Zugang = false;
+Krankenhaus.Zugaenge[0] = 2;
+Krankenhaus.Zugaenge[1] = 1;
+
+Gebaeude Bahnhaltestelle = new Gebaeude();
+Bahnhaltestelle.Nummer = 3;
+Bahnhaltestelle.Anwesenheit = false;
+Bahnhaltestelle.Zugang = false;
+Bahnhaltestelle.Zugaenge[0] = 3;
+Bahnhaltestelle.Zugaenge[1] = 2;
+
+Gebaeude Schule = new Gebaeude();
+Schule.Nummer = 4;
+Schule.Anwesenheit = false;
+Schule.Zugang = false;
+Schule.Zugaenge[0] = 4;
+Schule.Zugaenge[1] = 3;
+
+Gebaeude Feuerwehrwache = new Gebaeude();
+Feuerwehrwache.Nummer = 5;
+Feuerwehrwache.Anwesenheit = false;
+Feuerwehrwache.Zugang = false;
+Feuerwehrwache.Zugaenge[0] = 5;
+Feuerwehrwache.Zugaenge[1] = 4;
+
+Gebaeude Obdachlosenlager = new Gebaeude();
+Obdachlosenlager.Nummer = 6;
+Obdachlosenlager.Anwesenheit = false;
+Obdachlosenlager.Zugang = false;
+Obdachlosenlager.Zugaenge[0] = 6;
+Obdachlosenlager.Zugaenge[1] = 5;
+
+Gebaeude kino = new Gebaeude();
+kino.Nummer = 7; // Hier war ein Fehler: Nummer 6 wurde doppelt verwendet
+kino.Anwesenheit = false;
+kino.Zugang = false;
+kino.Zugaenge[0] = 7;
+kino.Zugaenge[1] = 5;
+
+Gebaeude schwimmbad = new Gebaeude();
+schwimmbad.Nummer = 8; // Hier war ein Fehler: Nummer 6 wurde doppelt verwendet
+schwimmbad.Anwesenheit = false;
+schwimmbad.Zugang = false;
+schwimmbad.Zugaenge[0] = 8;
+schwimmbad.Zugaenge[1] = 5;
+
+Gebaeude hafen = new Gebaeude();
+hafen.Nummer = 9; // Hier war ein Fehler: Nummer 6 wurde doppelt verwendet
+hafen.Anwesenheit = false;
+hafen.Zugang = false;
+hafen.Zugaenge[0] = 9;
+hafen.Zugaenge[1] = 5;
+
+
+
