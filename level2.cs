@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExitGame
 {
-    internal class level2
+    internal class level2 : AbstractAction
     {
-        static void StarteLevel2()
+        public override void Execute()
         {
             // Level 2 - Krankenhaus-Intro
             Console.Clear();
@@ -41,7 +41,7 @@ namespace ExitGame
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut!");
-                StarteLevel2();  // Rekursiver Aufruf, um sicherzustellen, dass der Spieler eine gültige Entscheidung trifft
+                Execute();  // Rekursiver Aufruf, um sicherzustellen, dass der Spieler eine gültige Entscheidung trifft
             }
         }
 
@@ -137,4 +137,3 @@ namespace ExitGame
         }
     }
 }
-
