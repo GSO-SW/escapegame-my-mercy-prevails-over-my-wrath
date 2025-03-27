@@ -16,6 +16,7 @@ namespace ExitGame
             string eingabe;
             int eingabe_int;
 
+           
             while (true)
             {
                 Console.Clear();
@@ -62,11 +63,12 @@ namespace ExitGame
                 Console.WriteLine("                     WELCOME TO                      ");
                 Console.WriteLine("------------------------------------------------------");
                 Console.WriteLine("                   YOUR LAST DAY                      ");
-                Console.WriteLine("                 Press Enter to continue                 ");
+                Console.WriteLine("                 Press 0 to continue                 ");
                 Console.WriteLine(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
 
+                eingabe = Console.ReadLine();
 
-            } while (System.Console.ReadKey().Key != System.ConsoleKey.Enter);
+            } while (!int.TryParse(eingabe, out eingabe_int) || eingabe_int != 0);
 
             Console.Clear();
 
@@ -80,26 +82,27 @@ namespace ExitGame
         static void GebeEinleitung()
         {
             // Einführungstext
- Console.WriteLine("------------------------------------------------------");
- Console.WriteLine("                   INTRODUCTION                       ");
- Console.WriteLine("------------------------------------------------------");
- Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
- Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
- Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
- Console.WriteLine("Du spielst Rick Grimes einen Polizisten der alles für die Gerechtigkeit tut");
- Console.WriteLine("Jedoch als du aufwachst an deinem Arbeitsplatz hast du was bemerkt...................");   
- Console.WriteLine("Jede Entscheidung könnte dein Schicksal besiegeln also wähle weise. Viel Glück!");
- Console.WriteLine();
- Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("                   INTRODUCTION                       ");
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
+            Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
+            Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
+            Console.WriteLine("Du spielst Rick Grimes einen Polizisten der alles für die Gerechtigkeit tut");
+            Console.WriteLine("Jedoch als du aufwachst an deinem Arbeitsplatz hast du was bemerkt...................");   
+            Console.WriteLine("Jede Entscheidung könnte dein Schicksal besiegeln also wähle weise. Viel Glück!");
+            Console.WriteLine();
+            Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
 
             // Auf Benutzereingabe warten, bevor das Spiel fortgesetzt wird
             Console.ReadKey();
 
             // Jetzt Bildschirm löschen, bevor das Spiel fortgesetzt wird
             Console.Clear();
+            level2 level2 = new level2();
+            level2.Execute();
         }
     }
 
 
 }
-
