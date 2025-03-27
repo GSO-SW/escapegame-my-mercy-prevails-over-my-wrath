@@ -16,6 +16,7 @@ namespace ExitGame
             string eingabe;
             int eingabe_int;
 
+           
             while (true)
             {
                 Console.Clear();
@@ -87,6 +88,8 @@ namespace ExitGame
             Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
             Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
             Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
+            Console.WriteLine("Du spielst Rick Grimes einen Polizisten der alles für die Gerechtigkeit tut");
+            Console.WriteLine("Jedoch als du aufwachst an deinem Arbeitsplatz hast du was bemerkt...................");   
             Console.WriteLine("Jede Entscheidung könnte dein Schicksal besiegeln. Viel Glück!");
             Console.WriteLine();
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
@@ -101,4 +104,3 @@ namespace ExitGame
 
 
 }
-
