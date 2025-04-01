@@ -41,7 +41,7 @@ namespace ExitGame
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut!");
-                Execute();  // Rekursiver Aufruf, um sicherzustellen, dass der Spieler eine gültige Entscheidung trifft
+                Execute(); 
             }
         }
 
@@ -87,7 +87,7 @@ namespace ExitGame
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut.");
-                FluchtInDieUbahn();  // Rekursiver Aufruf, um sicherzustellen, dass der Spieler eine gültige Entscheidung trifft
+                FluchtInDieUbahn(); 
             }
         }
 
@@ -132,7 +132,7 @@ namespace ExitGame
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut.");
-                KampfMitDenZombies();  // Rekursiver Aufruf, um sicherzustellen, dass der Spieler eine gültige Entscheidung trifft
+                KampfMitDenZombies();  
             }
         }
     }
