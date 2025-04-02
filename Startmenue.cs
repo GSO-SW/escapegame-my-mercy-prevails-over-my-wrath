@@ -19,12 +19,12 @@ namespace ExitGame
            
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Wählen Sie eine Option:");
-                Console.WriteLine("1. Spiel Starten");
-                Console.WriteLine("2. Programm schließen");
-                Console.Write("Eingabe: ");
-                eingabe = Console.ReadLine();
+              Console.Clear();
+              Console.WriteLine("Wählen Sie eine Option:");
+              Console.WriteLine("1. Reise starten");
+              Console.WriteLine("2. Reise beenden");
+              Console.Write("Eingabe: ");
+              eingabe = Console.ReadLine();
 
                 if (!int.TryParse(eingabe, out eingabe_int))
                 {
