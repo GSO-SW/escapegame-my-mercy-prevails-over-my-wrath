@@ -41,13 +41,12 @@ namespace ExitGame
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut!");
-                Execute(); 
+                Execute();
             }
         }
 
         static void FluchtInDieUbahn()
         {
-            // Entscheidung für die Flucht in die U-Bahn
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                Das Risiko der Dunkelheit             ");
@@ -72,7 +71,9 @@ namespace ExitGame
                 Console.WriteLine("Du öffnest die Tür mit einem lauten Knacken und stürzt in die Dunkelheit der U-Bahn.");
                 Console.WriteLine("Es dauert nicht lange, bis du seltsame Geräusche hörst. Die Dunkelheit ist erdrückend und du weißt nicht, was auf dich wartet...");
                 Console.WriteLine("Doch in der Ferne siehst du ein schwaches Licht. Vielleicht gibt es doch noch Hoffnung.");
-                Console.WriteLine("Der Weg in die U-Bahn war der richtige, aber du bist nicht allein.");
+                Console.WriteLine("Der Weg in die U-Bahn war der richtige, ABER du bist nicht allein.");
+                Console.WriteLine("\nTrotz der Gefahr und der ungewissen Dunkelheit hast du knapp überlebt. Aber der wahre Kampf beginnt jetzt.");
+                Console.ReadKey();
             }
             else if (eingabe == "2")
             {
@@ -82,18 +83,20 @@ namespace ExitGame
                 Console.WriteLine("------------------------------------------------------");
                 Console.WriteLine("Du entscheidest dich, die U-Bahn nicht zu betreten, da sie zu gefährlich erscheint.");
                 Console.WriteLine("Die Zombies kommen immer näher und es gibt keinen anderen Ausweg...");
-                Console.WriteLine("Es bleibt keine Zeit für eine Entscheidung. Der Kampf beginnt.");
+                Console.WriteLine("Es bleibt keine Zeit für eine Entscheidung. Der Kampf beginnt!");
+                Console.WriteLine("\nTrotzdessen starben Rick und Joel wenige Augenblicke später, weil eine große Horde sie zerfleischt haben ):");
+                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut.");
-                FluchtInDieUbahn(); 
+                FluchtInDieUbahn();
             }
         }
 
+
         static void KampfMitDenZombies()
         {
-            // Entscheidung für den Kampf mit den Zombies
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                Der verzweifelte Kampf                ");
@@ -117,7 +120,9 @@ namespace ExitGame
                 Console.WriteLine("Du und Joel nehmen eure Waffen und kämpfen verbittert gegen die Zombies.");
                 Console.WriteLine("Es wird ein blutiger Kampf, bei dem viele Monster auf euch stürzen.");
                 Console.WriteLine("Die Munition geht langsam zur Neige, aber ihr kämpft weiter, da der einzige Ausweg in der Flucht liegt.");
-                Console.WriteLine("Schließlich schafft ihr es, die Zombies zu besiegen – aber der Preis war hoch.");
+                Console.WriteLine("Leider ist die Zahl der Zombies zu hoch. Die Munition reicht nicht aus, und ihr werdet überwältigt...");
+                Console.WriteLine("\nDie Konfrontation war zu hart – und du hast dein Leben verloren ):.");
+                Console.ReadKey();
             }
             else if (eingabe == "2")
             {
@@ -128,11 +133,13 @@ namespace ExitGame
                 Console.WriteLine("Du versuchst, einen Plan auszuarbeiten, aber es bleibt keine Zeit.");
                 Console.WriteLine("Die Zombies sind bereits auf euch zugestürmt, und es bleibt nur der direkte Kampf.");
                 Console.WriteLine("Es könnte zu spät sein, um eine Chance zu haben...");
+                Console.WriteLine("\nTrotz des Harten Kampfes überlebten du und Joel. ABER der wahre Kampf beginnt jetzt!  ");              
+                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine("Ungültige Eingabe. Versuch es erneut.");
-                KampfMitDenZombies();  
+                KampfMitDenZombies();
             }
         }
     }
