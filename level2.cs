@@ -86,6 +86,7 @@ namespace ExitGame
                 Console.WriteLine("Es bleibt keine Zeit für eine Entscheidung. Der Kampf beginnt!");
                 Console.WriteLine("\nTrotzdessen starben Rick und Joel wenige Augenblicke später, weil eine große Horde sie zerfleischt haben ):");
                 Console.ReadKey();
+                Startmenue.Execute();
             }
             else
             {
@@ -123,6 +124,7 @@ namespace ExitGame
                 Console.WriteLine("Leider ist die Zahl der Zombies zu hoch. Die Munition reicht nicht aus, und ihr werdet überwältigt...");
                 Console.WriteLine("\nDie Konfrontation war zu hart – und du hast dein Leben verloren ):.");
                 Console.ReadKey();
+                Startmenue.Execute();
             }
             else if (eingabe == "2")
             {
