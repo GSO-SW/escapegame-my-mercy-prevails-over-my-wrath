@@ -63,12 +63,10 @@ namespace ExitGame
                 Console.WriteLine("                     WELCOME TO                      ");
                 Console.WriteLine("------------------------------------------------------");
                 Console.WriteLine("                   YOUR LAST DAY                      ");
-                Console.WriteLine("                 Press 0 to continue                 ");
+                Console.WriteLine("                 Press Enter to continue                 ");
                 Console.WriteLine(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
 
-                eingabe = Console.ReadLine();
-
-            } while (!int.TryParse(eingabe, out eingabe_int) || eingabe_int != 0);
+            } while (System.Console.ReadKey().Key != System.ConsoleKey.Enter);
 
             Console.Clear();
 
