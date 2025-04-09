@@ -76,31 +76,34 @@ namespace ExitGame
 
             Console.Clear();
 
-            Console.WriteLine("Rick grimes rennt zur waffenkammer nur um 3 seiner kollegen zu sehen die leblos herumstreunern,in ihren augen war der tod geschrieben.\n Aber sie kommen nicht durch die gitter tür an ihn ran.\n Er überlegt wie er an die waffen kommt.");
+            Console.WriteLine("Rick Grimes rennt zur Waffenkammer, nur um 3 seiner Kollegen zu sehen, die leblos herumstreunern. In ihren Augen war der Tod geschrieben.\nAber sie kommen nicht durch die Gittertür an ihn ran.\nEr überlegt, wie er an die Waffen kommt.");
             Console.WriteLine("Er überlegt:");
-            Console.WriteLine("1: Seine Waffe Abzufeuern");
-            Console.WriteLine("2: Die zombies mit seiner puren männlichkeit zu überumpeln");
-            eingabe= Console.ReadLine();
+            Console.WriteLine("1: Seine Waffe abfeuern");
+            Console.WriteLine("2: Die Zombies mit seiner puren Männlichkeit überwältigen");
+
+            eingabe = Console.ReadLine();
 
             if (eingabe == "1")
             {
-                Console.WriteLine("Rick Grimes greift zu seiner dienst waffe, Er feurt die kugeln auf die zombies ab und Streckt sie nach einander nieder.\n Doch die schüsse locken eine horde an Zombies an.\n Sie brechen durch die tür die nach draußen führt und stürmen auf ihn zu.");
+                Console.WriteLine("Rick Grimes greift zu seiner Dienstwaffe. Er feuert die Kugeln auf die Zombies ab und streckt sie nacheinander nieder.");
+                Console.WriteLine("Doch die Schüsse locken eine Horde an Zombies an.");
+                Console.WriteLine("Sie brechen durch die Tür, die nach draußen führt, und stürmen auf ihn zu.");
+                Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren.");
+                Console.ReadKey();
+                Console.Clear();
             }
             else if (eingabe == "2")
             {
-                Console.WriteLine("Rick Grimes entscheidet sich seine kugeln zu Sparen und versucht die zombies mit seiner Puren männlichen kraft zu erschlagen.");
+                Console.WriteLine("Rick Grimes entscheidet sich, seine Kugeln zu sparen und versucht, die Zombies mit seiner puren männlichen Kraft zu erschlagen.");
 
-                Console.WriteLine("------------------------------------------------------");
-                Console.WriteLine("                  KAMPF-SZENARIO                      ");
-                Console.WriteLine("------------------------------------------------------");
+                // ------------------- KAMPF 1 -------------------
                 Console.WriteLine("Ein Zombie springt aus dem Schatten auf Rick Grimes zu!");
                 Console.WriteLine("Du musst schnell reagieren und 'A' drücken, um ihn abzuwehren!");
                 Console.WriteLine("Du hast 3 Sekunden Zeit!");
 
-                DateTime startTime = DateTime.Now;
                 bool tasteGedrueckt = false;
+                DateTime startTime = DateTime.Now;
 
-                //Code für tastendruckn in einer bestimmten zeit
                 while ((DateTime.Now - startTime).TotalSeconds < 3)
                 {
                     if (Console.KeyAvailable)
@@ -115,18 +118,34 @@ namespace ExitGame
                         else
                         {
                             Console.WriteLine("Falsche Taste! Der Zombie hat dich erwischt.");
-                            break;
+                            Console.WriteLine("Du bist Tod!");
+                            Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
+                            Console.ReadKey();
+                            return;
                         }
                     }
 
-                    Thread.Sleep(100); 
+                    Thread.Sleep(100);
                 }
 
-                Console.Clear();
+                if (!tasteGedrueckt)
+                {
+                    Console.WriteLine("Du hast zu langsam reagiert. Der Zombie hat dich erwischt!");
+                    Console.WriteLine("Du bist Tod!");
+                    Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
+                    Console.ReadKey();
+                    return;
+                }
 
-                Console.WriteLine("Ein weiterer zombie versucht Rick Grimes von hinten anzugreifen.");
+                // ------------------- KAMPF 2 -------------------
+                Console.Clear();
+                tasteGedrueckt = false;
+                Console.WriteLine("Ein weiterer Zombie versucht Rick Grimes von hinten anzugreifen.");
                 Console.WriteLine("Du musst schnell reagieren und 'S' drücken, um ihn abzuwehren!");
                 Console.WriteLine("Du hast 3 Sekunden Zeit!");
+
+                startTime = DateTime.Now;
+
                 while ((DateTime.Now - startTime).TotalSeconds < 3)
                 {
                     if (Console.KeyAvailable)
@@ -137,19 +156,21 @@ namespace ExitGame
                             Console.WriteLine("Du hast den Zombie erfolgreich abgewehrt!");
                             tasteGedrueckt = true;
                             Console.Clear();
-                            Console.WriteLine("Der Lärm lockt noch weiter Zombies an. Sie brechen durch die Tür die nach Draußen führt.");
+                            Console.WriteLine("Der Lärm lockt noch weitere Zombies an. Sie brechen durch die Tür, die nach draußen führt.");
                             break;
                         }
                         else
                         {
                             Console.WriteLine("Falsche Taste! Der Zombie hat dich erwischt.");
-                            break;
+                            Console.WriteLine("Du bist Tod!");
+                            Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
+                            Console.ReadKey();
+                            return;
                         }
                     }
 
                     Thread.Sleep(100);
                 }
-
 
                 if (!tasteGedrueckt)
                 {
@@ -157,87 +178,137 @@ namespace ExitGame
                     Console.WriteLine("Du bist Tod!");
                     Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
                     Console.ReadKey();
-                    startmenue.Execute();
                     return;
                 }
             }
             else
             {
                 Console.WriteLine("Ungültige Eingabe.");
+                return;
             }
 
-            Console.WriteLine("Sie brechen durch die tür die nach draußen führt und stürmen auf ihn zu.\n Rick Grimes ertsarrt und weiss nicht was er tun soll.Auf einmal packt ihn ein mann mit cowboy Hut und sperrt ihn mit Rick Grimes in die waffenkammer.\");");
+            // Gemeinsame Fortsetzung nach beiden Pfaden
+            Console.WriteLine("Rick Grimes erstarrt und weiß nicht, was er tun soll.");
+            Console.WriteLine("Auf einmal packt ihn ein Mann und sperrt sich mit ihm in die Waffenkammer.");
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
             Console.ReadKey();
+                Console.Clear();
 
+                Console.WriteLine("Der man der dich in die waffenkammer gesperrt hat Guckt dich an es, herscht stille für eine sekunden.\n Der Mysteriöse mann fängt an zu sprechen 'Hi'");
+                Console.WriteLine("Du guckst den mann an. Was tust du?");
+
+                Console.WriteLine("1: 'Hi' zürcksagen");
+                Console.WriteLine("2:  Fragen wer er ist?");
+                Console.WriteLine("3:         Nichtsagen");
+
+                eingabe = Console.ReadLine();
+
+                if (eingabe == "1")
+                {
+                    Console.WriteLine("Die Mysteriöse person sagt:'Du hast da ja was angelockt.'\n Er gibt dir die hand du erweiderst das 'mein name istJoel Miller'");
+                }
+                else if (eingabe == "2")
+                {
+                    Console.WriteLine("Die Mysteriöse person sagt: 'Ah natürlich, Mein name ist Joel Miller und ich habe dir gerade den Arsch gerettet");
+                }
+                else if (eingabe == "3")
+                {
+                    Console.WriteLine("DI emysteriöse person sagt: 'Hats dir sprache verschlagen, achso mein name ist Joel Miller'");
+                }
+                else
+                {
+                    Console.WriteLine("Ungültige Eingabe.");
+                }
+
+                Console.WriteLine("Joel Miller sagt: 'Wir sollten über die Dachluke rauskommen in der nähe gibt es ein Krankenhaus wir sollten dahin gehen Partner'");
+                Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
+                Console.ReadKey();
+
+                Console.Clear();
+
+
+                Console.WriteLine("Rick Grimes sagt 'Wir sollte uns noch die waffen holen'.\n Joel fragt: 'Weisst du wie man die Schränke aufbekommt, schließlich arbeitest du hier und wir brauchen eine zahlen kombination un das schloss zu öffnen'\n Rick grimes sagt 'Scheisse der ging... warte... UWU und das in zahlen'");
+                Console.WriteLine();
+                Console.WriteLine("Du stehst vor dem zahlenschloss, gebe den richtigen code ein aber pass auf, wenn due das falshce eingibst explodiert es wegen seines sicherheitssystem.");
+                eingabe = Console.ReadLine();
+
+                if(eingabe == "232123")
+                {
+                    Console.WriteLine("Erleichtert das Rick grimes das schloss aufbekommen hat sthet er nun vor zwei waffen, er nam mit was er tragen konnte.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("Du hast es falsch eingegeben und das schloss jagt alles in die luft");
+                    Console.WriteLine("Du bist Tod!");
+                    Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
+                    Console.ReadKey();
+                    // startmenue.Execute(); // Optional: Nur falls vorhanden
+                    return;
+                }
+
+            Console.WriteLine("Trotzdem stehen beide immer noch vor einem problem, sie sind stuck in der waffenkammer");
+            Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
+            Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Der man der dich in die waffenkammer gesperrt hat Guckt dich an es, herscht stille für eine sekunden.\n Der Mysteriöse mann fängt an zu sprechen 'Howdy Partner'");
-            Console.WriteLine("Du guckst den mann an. Was tust du?");
-
-            Console.WriteLine("1: 'Howdy' zürcksagen");
-            Console.WriteLine("2:  Fragen wer er ist?");
-            Console.WriteLine("3:         Nichtsagen");
-
-            eingabe = Console.ReadLine();
+            Console.WriteLine("Zu dem glück beider personen befand sich in der waffenkammer ein: Ferngesteuertes fahrzeug mit lenker,eine eiruhr, Panzertape und eine Uran-235,15-kilo TNT,\n Little boy mini-Atombombe die recihen würde um die hälfte der polizeistation in die luft zu jagen.");
+            Console.WriteLine();
+            Console.WriteLine("Was tust du?");
+            Console.WriteLine("1: Du klebst die eieruhr ,mit dem panzertape, ans das verngesteurte fahrzeug und lenkst die Zombies ab");
+            Console.WriteLine("2: Du klebst die Mini-atombombe ,mit dem panzertape, ans gitter, konfigurierst es mit der eieruhr und spielst mit dem Auto bis die bombe hochgeht");
+            Console.WriteLine("3: Du klebst die Mini-atombobe ,mit dem panzertape ans auto, konfigurierst sie mit der eieruhr und fährst das auto weitgenug weg sodass sie euch nicht tötet");
+            Console.ReadKey();
 
             if (eingabe == "1")
             {
-                Console.WriteLine("Die Mysteriöse person sagt:'Du hast da ja was angelockt partner.'\n Er gibt dir die hand du erweiderst das 'mein name ist Arthur Morgan'");
+                Console.WriteLine("Die beiden kleben die eieruhr an das Ferngetseurte fahrzeug und lockt die zombies mit den geräuschen weg");
+                Console.Clear();
             }
             else if (eingabe == "2")
             {
-                Console.WriteLine("Die Mysteriöse person sagt: 'Ah natürlich, Mein name ist Arthur Morgan und ich ,partner, habe dir gerade den Arsch gerettet");
+                Console.WriteLine("Die beiden konfigurieren und kleben die bombe an das gitter um die zombies einfach wegzusprengen,\nals sie alles gemacht haben spielen sie mit dem auto um sich die zeit zu vertreiben, nach ein paar minuten war nix mehr von den beiden übrig");
+                Console.WriteLine("Du bist Tod!");
+                Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
+                Console.ReadKey();
+                return;
             }
             else if (eingabe == "3")
             {
-                Console.WriteLine("DI emysteriöse person sagt: 'Hats dir sprache verschlagen partner, achso mein name ist Arthur Morgan'");
+                Console.WriteLine("Die beiden konfigurieren die bombe mit der eieruhr kelben sie an das Verngesteuerte auto und fahren es weit weg,\n die bombe explodiert und tötet alle zombies und hat die hälfte der polizeistation in die luft gejagt, doch beide leben noch");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
                 Console.WriteLine("Ungültige Eingabe.");
             }
 
-            Console.WriteLine("Arthur morgen sagt: 'Wir sollten über die Dachluke rauskommen in der nähe gibt es ein Krankenhaus wir sollten dahin gehen Partner'");
-            Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
-            Console.ReadKey();
+            Console.WriteLine("Als der weg sicher war bahnten sich beide auf den weg zum Krankenhaus");
 
-            Console.Clear();
-
-
-
-
-
-
-
-
-
-
-
-            Console.WriteLine("Möchtest du weitermachen? Wähle weise");
-            Console.WriteLine("1: Den Alptraum weiterspielen (Level 2)");
+            Console.WriteLine("Du bist dabei level 2 zu betreten !Möchtest du weitermachen?");
+            Console.WriteLine("1: Den Alptraum weiterspielen (HORROR)");
             Console.WriteLine("2: Auföhren (Angsthase)");
-            eingabe = Console.ReadLine();
+            Console.WriteLine(" Wähle weise");
+                eingabe = Console.ReadLine();
 
-            if (eingabe == "1")
-            {
-                level2 level2 = new level2();
+                if (eingabe == "1")
+                {
+                    level2 level2 = new level2();
 
-                level2.Execute();
+                    level2.Execute();
+                }
+                else if (eingabe == "2") ;
+                {
+                    Console.WriteLine("Feigling!");
+                    Console.WriteLine("Drücke eine taste um ins Hauptmeü zurückzukehren");
+                    Console.ReadKey();
+                    // Zurück ins Hauptmenü
+                    startmenue.Execute();
+
+                }
+
             }
-            else if (eingabe == "2");
-            {
-                Console.WriteLine("Feigling!");
-                Console.WriteLine("Drücke eine taste um ins Hauptmeü zurückzukehren");
-                Console.ReadKey();
-                // Zurück ins Hauptmenü
-                startmenue.Execute();
-
-            }
-
-
-
-
         }
     }
-}
