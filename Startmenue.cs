@@ -85,7 +85,7 @@ namespace ExitGame
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                   INTRODUCTION                       ");
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise, ");
+            Console.WriteLine("Willkommen zu 'YOUR LAST DAY'! Du bist auf einer gefährlichen Reise,");
             Console.WriteLine("in der du Entscheidungen treffen musst, um zu überleben. ");
             Console.WriteLine("In diesem Spiel wirst du verschiedenen Herausforderungen begegnen. ");
             Console.WriteLine("Du spielst Rick Grimes einen Polizisten der alles für die Gerechtigkeit tut");
@@ -99,10 +99,17 @@ namespace ExitGame
 
             // Jetzt Bildschirm löschen, bevor das Spiel fortgesetzt wird
             Console.Clear();
-            level2 level2 = new level2();
-            level2.Execute();
+
+
+            //start des ersten levels
+            Level1 level1 = new Level1();
+
+            level1.Execute();
+
+            
         }
     }
 
 
 }
+
