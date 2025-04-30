@@ -152,8 +152,11 @@ namespace ExitGame
                 Console.WriteLine("Du blockierst die Tür und startest den Truck im letzten Moment.");
                 Console.WriteLine("Rick fährt, Joel feuert aus dem Fenster – ihr brecht durch das Tor.");
                 Console.WriteLine("LEVEL 5 ABGESCHLOSSEN. Weiter zu LEVEL 6");
+                Console.WriteLine("Drücke eine Taste, um fortzufahren...");
                 Console.ReadKey();
-                // Hier könntest du optional: new level6().Execute(); aufrufen
+                level6 level6 = new level6();
+                level6.Execute();
+
             }
             else
             {
@@ -163,4 +166,3 @@ namespace ExitGame
         }
     }
 }
-
