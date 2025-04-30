@@ -245,7 +245,7 @@ namespace ExitGame
                 Console.WriteLine("Du stehst vor dem zahlenschloss, gebe den richtigen code ein aber pass auf, wenn due das falshce eingibst explodiert es wegen seines sicherheitssystem.");
                 eingabe = Console.ReadLine();
 
-                if(eingabe == "232123")
+                if(eingabe == "212321")
                 {
                     Console.WriteLine("Erleichtert das Rick grimes das schloss aufbekommen hat sthet er nun vor zwei waffen, er nam mit was er tragen konnte.");
                     Console.ReadKey();
