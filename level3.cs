@@ -11,6 +11,8 @@ namespace ExitGame
     {
         public override void Execute()
         {
+            Startmenue startmenue = new Startmenue();
+            level4 level4 = new level4();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                      LEVEL 3                         ");
             Console.WriteLine("------------------------------------------------------");
@@ -27,6 +29,8 @@ namespace ExitGame
             if (entscheidung1.ToLower() == "brücke")
             {
                 Console.WriteLine("Du hast die Brücke gewählt und gehst in Richtung der Sicherheit. Du hast gewonnen!");
+                Console.ReadKey();
+                level4.Execute();
             }
             else if (entscheidung1.ToLower() == "tunnel")
             {
@@ -40,6 +44,8 @@ namespace ExitGame
                 if (entscheidung2 == "1")
                 {
                     Console.WriteLine("Du gehst durch Tür 1 und findest den Ausgang. Du hast Überlebt fürs erste");
+                    Console.ReadKey();
+                    level4 level4 = new level4();
                 }
                 else if (entscheidung2 == "2")
                 {
@@ -57,15 +63,9 @@ namespace ExitGame
 
             Console.WriteLine("Drücke eine beliebige Taste, um das Spiel zu beenden.");
             Console.ReadKey();
-
-
-
-
-
-
-
-
+            startmenue.Execute();
         }
 
     }
 }
+
