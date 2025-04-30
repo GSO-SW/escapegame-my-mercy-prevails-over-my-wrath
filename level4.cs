@@ -141,6 +141,8 @@ namespace ExitGame
                 Console.WriteLine("Doch das Ding im Gebäude sieht euch – es wird euch folgen...");
                 Console.WriteLine("Ihr habt überlebt – aber ihr seid jetzt gejagt.");
                 Console.ReadKey();
+                level5 level5 = new level5();
+                level5.Execute();
             }
             else
             {
