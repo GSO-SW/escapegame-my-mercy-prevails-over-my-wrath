@@ -25,6 +25,7 @@ namespace ExitGame
 
             if (eingabe == "1")
             {
+                Console.Clear();
                 Console.WriteLine("Du nimmst das telefon ab.Rick Grimes hört ein unmenschliches tiefes grönen");
             }
             else if (eingabe == "2")
@@ -244,7 +245,7 @@ namespace ExitGame
                     Console.WriteLine("Du bist Tod!");
                     Console.WriteLine("Drücke eine Taste, um ins Hauptmenü zurückzukehren.");
                     Console.ReadKey();
-                    // startmenue.Execute(); // Optional: Nur falls vorhanden
+                    startmenue.Execute();
                     return;
                 }
 

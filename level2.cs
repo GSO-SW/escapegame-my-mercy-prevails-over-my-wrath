@@ -10,7 +10,6 @@ namespace ExitGame
     {
         public override void Execute()
         {
-            // Level 2 - Krankenhaus-Intro
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                      LEVEL 2                         ");
@@ -23,12 +22,13 @@ namespace ExitGame
             Console.WriteLine("\nDie Tür vor euch scheint der einzige Ausweg zu sein, aber sie ist blockiert und lässt sich nicht öffnen.");
             Console.WriteLine("Ein Fluchtweg könnte die einzige Möglichkeit sein, zu überleben.");
 
-            Console.WriteLine("\nWähle eine Option:");
+            Console.WriteLine("\nWähle eine Option (oder tippe 'exit' zum Beenden):");
             Console.WriteLine("1. Das Risiko der Dunkelheit - Flucht in die U-Bahn");
             Console.WriteLine("2. Der verzweifelte Kampf - Konfrontation mit den Zombies");
             Console.Write("Eingabe: ");
 
-            string eingabe = Console.ReadLine();
+            string eingabe = Console.ReadLine()?.ToLower();
+            if (eingabe == "exit") Environment.Exit(0);
 
             if (eingabe == "1")
             {
@@ -47,6 +47,7 @@ namespace ExitGame
 
         static void FluchtInDieUbahn()
         {
+            Startmenue startmenue = new Startmenue();
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                Das Risiko der Dunkelheit             ");
@@ -55,12 +56,13 @@ namespace ExitGame
             Console.WriteLine("„Hier entlang!“, zischt er.");
             Console.WriteLine("Die Tür klemmt. Ihr müsst sie mit Gewalt öffnen, doch das wird Lärm machen.");
             Console.WriteLine("Die Dunkelheit der U-Bahn scheint unheimlich tief und gefährlich. Niemand weiß, was dort unten lauert...");
-            Console.WriteLine("\nWirst du das Risiko eingehen und fliehen?");
+            Console.WriteLine("\nWirst du das Risiko eingehen und fliehen? (oder tippe 'exit')");
             Console.WriteLine("1. Ja, ich fliehe in die U-Bahn und hoffe auf das Beste.");
             Console.WriteLine("2. Nein, wir müssen einen anderen Weg finden.");
             Console.Write("Eingabe: ");
 
-            string eingabe = Console.ReadLine();
+            string eingabe = Console.ReadLine()?.ToLower();
+            if (eingabe == "exit") Environment.Exit(0);
 
             if (eingabe == "1")
             {
@@ -86,7 +88,7 @@ namespace ExitGame
                 Console.WriteLine("Es bleibt keine Zeit für eine Entscheidung. Der Kampf beginnt!");
                 Console.WriteLine("\nTrotzdessen starben Rick und Joel wenige Augenblicke später, weil eine große Horde sie zerfleischt haben ):");
                 Console.ReadKey();
-                Startmenue.Execute();
+                startmenue.Execute();
             }
             else
             {
@@ -95,9 +97,9 @@ namespace ExitGame
             }
         }
 
-
         static void KampfMitDenZombies()
         {
+            Startmenue startmenue = new Startmenue();
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                Der verzweifelte Kampf                ");
@@ -105,12 +107,13 @@ namespace ExitGame
             Console.WriteLine("„Scheiß drauf, wir kämpfen!“, faucht Joel.");
             Console.WriteLine("Er hebt seine Waffe. Doch die Munition ist knapp, und wenn ihr zu viele Zombies anlockt, könnte es das Ende bedeuten.");
             Console.WriteLine("„Wir müssen uns irgendwie einen Weg freikämpfen!“, ruft Rick.");
-            Console.WriteLine("\nWirst du dich auf den Kampf einlassen?");
+            Console.WriteLine("\nWirst du dich auf den Kampf einlassen? (oder tippe 'exit')");
             Console.WriteLine("1. Ja, wir kämpfen bis zum letzten Atemzug.");
             Console.WriteLine("2. Wir müssen einen Plan ausarbeiten, bevor wir kämpfen.");
             Console.Write("Eingabe: ");
 
-            string eingabe = Console.ReadLine();
+            string eingabe = Console.ReadLine()?.ToLower();
+            if (eingabe == "exit") Environment.Exit(0);
 
             if (eingabe == "1")
             {
@@ -124,7 +127,7 @@ namespace ExitGame
                 Console.WriteLine("Leider ist die Zahl der Zombies zu hoch. Die Munition reicht nicht aus, und ihr werdet überwältigt...");
                 Console.WriteLine("\nDie Konfrontation war zu hart – und du hast dein Leben verloren ):.");
                 Console.ReadKey();
-                Startmenue.Execute();
+                startmenue.Execute();
             }
             else if (eingabe == "2")
             {
@@ -135,8 +138,11 @@ namespace ExitGame
                 Console.WriteLine("Du versuchst, einen Plan auszuarbeiten, aber es bleibt keine Zeit.");
                 Console.WriteLine("Die Zombies sind bereits auf euch zugestürmt, und es bleibt nur der direkte Kampf.");
                 Console.WriteLine("Es könnte zu spät sein, um eine Chance zu haben...");
-                Console.WriteLine("\nTrotz des Harten Kampfes überlebten du und Joel. ABER der wahre Kampf beginnt jetzt!  ");              
+                Console.WriteLine("\nTrotz des Harten Kampfes überlebten du und Joel. ABER der wahre Kampf beginnt jetzt!  ");
+                Console.WriteLine("Drücke eine Taste, um fortzufahren...");
                 Console.ReadKey();
+                level3 level3 = new level3();
+                level3.Execute();
             }
             else
             {

@@ -6,6 +6,7 @@ namespace ExitGame
     {
         public override void Execute()
         {
+            Startmenue startmenue = new Startmenue();
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                      LEVEL 4                         ");
@@ -53,6 +54,7 @@ namespace ExitGame
 
         static void DurchDenKeller()
         {
+            Startmenue startmenue = new Startmenue();
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                 Der Weg durch den Keller             ");
@@ -80,7 +82,7 @@ namespace ExitGame
                 Console.WriteLine("Es packt dich, und bevor du reagieren kannst, wird es dunkel.");
                 Console.WriteLine("Du bist gestorben, das Spiel endet hier.");
                 Console.ReadKey();
-                Environment.Exit(0); // Tödliches Ende
+                startmenue.Execute();
             }
             else if (eingabe == "2")
             {
@@ -103,6 +105,7 @@ namespace ExitGame
 
         static void ZurBibliothek()
         {
+            level5 level5 = new level5();
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                   Die verlassene Bibliothek          ");
@@ -130,6 +133,7 @@ namespace ExitGame
                 Console.WriteLine("Knapp entkommen. In dem Buch entdeckt ihr nun den Hinweis auf den nächsten Ort.");
                 Console.WriteLine("Die Reise geht weiter – zur Féuerwehrwache! ");
                 Console.ReadKey();
+                level5.Execute();
             }
             else if (eingabe == "2")
             {
@@ -141,6 +145,7 @@ namespace ExitGame
                 Console.WriteLine("Doch das Ding im Gebäude sieht euch – es wird euch folgen...");
                 Console.WriteLine("Ihr habt überlebt – aber ihr seid jetzt gejagt.");
                 Console.ReadKey();
+                level5.Execute();
             }
             else
             {

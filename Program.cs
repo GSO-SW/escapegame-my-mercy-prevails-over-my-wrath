@@ -8,7 +8,7 @@ namespace ExitGame
         public int Nummer;
         public bool Anwesenheit;
         public bool Zugang;
-        public int[] Zugaenge = new int[9]; // Array mit 8 Elementen
+        public int[] Zugaenge = new int[9];
 
 
     }
@@ -21,7 +21,7 @@ namespace ExitGame
             Polizeiwache.Nummer = 1;
             Polizeiwache.Anwesenheit = true;
             Polizeiwache.Zugang = true;
-            Polizeiwache.Zugaenge[0] = 1; // Korrekte Initialisierung des Arrays
+            Polizeiwache.Zugaenge[0] = 1; 
 
             Gebaeude Krankenhaus = new Gebaeude();
             Krankenhaus.Nummer = 2;
@@ -59,21 +59,21 @@ namespace ExitGame
             Obdachlosenlager.Zugaenge[1] = 5;
 
             Gebaeude kino = new Gebaeude();
-            kino.Nummer = 7; // Hier war ein Fehler: Nummer 6 wurde doppelt verwendet
+            kino.Nummer = 7; 
             kino.Anwesenheit = false;
             kino.Zugang = false;
             kino.Zugaenge[0] = 7;
             kino.Zugaenge[1] = 5;
 
             Gebaeude schwimmbad = new Gebaeude();
-            schwimmbad.Nummer = 8; // Hier war ein Fehler: Nummer 6 wurde doppelt verwendet
+            schwimmbad.Nummer = 8;
             schwimmbad.Anwesenheit = false;
             schwimmbad.Zugang = false;
             schwimmbad.Zugaenge[0] = 8;
             schwimmbad.Zugaenge[1] = 5;
 
             Gebaeude hafen = new Gebaeude();
-            hafen.Nummer = 9; // Hier war ein Fehler: Nummer 6 wurde doppelt verwendet
+            hafen.Nummer = 9;
             hafen.Anwesenheit = false;
             hafen.Zugang = false;
             hafen.Zugaenge[0] = 9;
