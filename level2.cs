@@ -136,7 +136,10 @@ namespace ExitGame
                 Console.WriteLine("Die Zombies sind bereits auf euch zugestürmt, und es bleibt nur der direkte Kampf.");
                 Console.WriteLine("Es könnte zu spät sein, um eine Chance zu haben...");
                 Console.WriteLine("\nTrotz des Harten Kampfes überlebten du und Joel. ABER der wahre Kampf beginnt jetzt!  ");              
+                Console.WriteLine("Drücke eine Taste, um fortzufahren...");
                 Console.ReadKey();
+                level3 level3 = new level3();
+                level3.Execute();
             }
             else
             {
