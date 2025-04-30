@@ -39,14 +39,16 @@ namespace ExitGame
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Ungültige Eingabe.");
+                Console.ReadKey();
+                Execute();
             }
 
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
             Console.ReadKey();
-
+        Auswahl2:
             Console.Clear();
-
             Console.WriteLine("Rick grimes springt auf,lässt den hörer dabei fallen.\n Er steht in einem korridor und kann sich entscheiden rechts nach draußen zu gehen oder links zur waffen kammer gehen");
             Console.WriteLine("Welchen weg soll er wählen?");
             Console.WriteLine("1: Rechts : Rausrennen");
@@ -70,13 +72,13 @@ namespace ExitGame
             else
             {
                 Console.WriteLine("Ungültige Eingabe.");
+                goto Auswahl2;
             }
 
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
             Console.ReadKey();
-
+        Auswahl3:
             Console.Clear();
-
             Console.WriteLine("Rick Grimes rennt zur Waffenkammer, nur um 3 seiner Kollegen zu sehen, die leblos herumstreunern. In ihren Augen war der Tod geschrieben.\nAber sie kommen nicht durch die Gittertür an ihn ran.\nEr überlegt, wie er an die Waffen kommt.");
             Console.WriteLine("Er überlegt:");
             Console.WriteLine("1: Seine Waffe abfeuern");
@@ -184,8 +186,10 @@ namespace ExitGame
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Ungültige Eingabe.");
-                return;
+                Console.ReadKey();
+                goto Auswahl3;
             }
 
             // Gemeinsame Fortsetzung nach beiden Pfaden
@@ -193,11 +197,10 @@ namespace ExitGame
             Console.WriteLine("Auf einmal packt ihn ein Mann und sperrt sich mit ihm in die Waffenkammer.");
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
             Console.ReadKey();
-                Console.Clear();
-
+        Auswahl4:
+            Console.Clear();
                 Console.WriteLine("Der man der dich in die waffenkammer gesperrt hat Guckt dich an es, herscht stille für eine sekunden.\n Der Mysteriöse mann fängt an zu sprechen 'Hi'");
                 Console.WriteLine("Du guckst den mann an. Was tust du?");
-
                 Console.WriteLine("1: 'Hi' zürcksagen");
                 Console.WriteLine("2:  Fragen wer er ist?");
                 Console.WriteLine("3:         Nichtsagen");
@@ -218,16 +221,17 @@ namespace ExitGame
                 }
                 else
                 {
+                Console.Clear();
                     Console.WriteLine("Ungültige Eingabe.");
-                }
+                Console.ReadKey();
+                goto Auswahl4;
+            }
 
                 Console.WriteLine("Joel Miller sagt: 'Wir sollten über die Dachluke rauskommen in der nähe gibt es ein Krankenhaus wir sollten dahin gehen Partner'");
                 Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
                 Console.ReadKey();
 
                 Console.Clear();
-
-
                 Console.WriteLine("Rick Grimes sagt 'Wir sollte uns noch die waffen holen'.\n Joel fragt: 'Weisst du wie man die Schränke aufbekommt, schließlich arbeitest du hier und wir brauchen eine zahlen kombination un das schloss zu öffnen'\n Rick grimes sagt 'Scheisse der ging... warte... UWU und das in zahlen'");
                 Console.WriteLine();
                 Console.WriteLine("Du stehst vor dem zahlenschloss, gebe den richtigen code ein aber pass auf, wenn due das falshce eingibst explodiert es wegen seines sicherheitssystem.");
@@ -252,8 +256,8 @@ namespace ExitGame
             Console.WriteLine("Trotzdem stehen beide immer noch vor einem problem, sie sind stuck in der waffenkammer");
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
             Console.ReadKey();
+        Auswahl5:
             Console.Clear();
-
             Console.WriteLine("Zu dem glück beider personen befand sich in der waffenkammer ein: Ferngesteuertes fahrzeug mit lenker,eine eiruhr, Panzertape und eine Uran-235,15-kilo TNT,\n Little boy mini-Atombombe die recihen würde um die hälfte der polizeistation in die luft zu jagen.");
             Console.WriteLine();
             Console.WriteLine("Was tust du?");
@@ -283,7 +287,10 @@ namespace ExitGame
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Ungültige Eingabe.");
+                Console.ReadKey();
+                goto Auswahl5;
             }
 
             Console.WriteLine("Als der weg sicher war bahnten sich beide auf den weg zum Krankenhaus");
