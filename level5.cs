@@ -12,7 +12,7 @@ namespace ExitGame
             Console.WriteLine("                     LEVEL 5: Feuerwehrwache          ");
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("Rick und Joel erreichen eine verlassene Feuerwehrwache.\nDie Tore stehen offen, drinnen ist alles still.");
-            Console.WriteLine("Ein alter Truck steht halb zerlegt in der Halle, und Blutspuren führen zur Tür mit der Aufschrift 'Einsatzleitung'.");
+            Console.WriteLine("Ein alter Truck steht halb zerlegt in der Halle, und Blutspuren fÃ¼hren zur TÃ¼r mit der Aufschrift 'Einsatzleitung'.");
             Console.WriteLine("\nWas tust du? (Oder tippe 'exit' zum Beenden)");
             Console.WriteLine("1. Folge den Blutspuren zur Einsatzleitung.");
             Console.WriteLine("2. Gehe zur Umkleidekabine.");
@@ -31,7 +31,7 @@ namespace ExitGame
             }
             else
             {
-                Console.WriteLine("Ungültige Eingabe.");
+                Console.WriteLine("UngÃ¼ltige Eingabe.");
                 Execute();
             }
         }
@@ -40,12 +40,12 @@ namespace ExitGame
         {
             Console.Clear();
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("                Büro der Einsatzleitung               ");
+            Console.WriteLine("                BÃ¼ro der Einsatzleitung               ");
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Chaos überall. Ein gefesselter Feuerwehrmann beginnt sich zu bewegen – er ist infiziert!");
+            Console.WriteLine("Chaos Ã¼berall. Ein gefesselter Feuerwehrmann beginnt sich zu bewegen â€“ er ist infiziert!");
             Console.WriteLine("\nWie reagierst du? (Oder tippe 'exit' zum Beenden)");
-            Console.WriteLine("1. Du schießt sofort.");
-            Console.WriteLine("2. Du versuchst, ihn mit dem Funkgerät zu schlagen.");
+            Console.WriteLine("1. Du schieÃŸt sofort.");
+            Console.WriteLine("2. Du versuchst, ihn mit dem FunkgerÃ¤t zu schlagen.");
             Console.Write("Eingabe: ");
 
             string eingabe = Console.ReadLine()?.ToLower();
@@ -57,14 +57,14 @@ namespace ExitGame
             }
             else if (eingabe == "2")
             {
-                Console.WriteLine("Der Beißer ist schneller – du wirst gebissen.");
+                Console.WriteLine("Der BeiÃŸer ist schneller â€“ du wirst gebissen.");
                 Console.WriteLine("Du bist Tod!");
                 Console.ReadKey();
                 return;
             }
             else
             {
-                Console.WriteLine("Ungültige Eingabe.");
+                Console.WriteLine("UngÃ¼ltige Eingabe.");
                 Einsatzleitung();
             }
         }
@@ -75,7 +75,7 @@ namespace ExitGame
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                   Umkleidekabine                     ");
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Du betrittst die dunkle Kabine. Plötzlich greifen dich mehrere Beißer aus Spinden an.");
+            Console.WriteLine("Du betrittst die dunkle Kabine. PlÃ¶tzlich greifen dich mehrere BeiÃŸer aus Spinden an.");
             Console.WriteLine("Du bist Tod!");
             Console.ReadKey();
             return;
@@ -87,13 +87,13 @@ namespace ExitGame
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                    Funkkontakt                       ");
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Du erledigst den Beißer. Dann hörst du eine Stimme im Funkgerät:");
-            Console.WriteLine("\"Hier ist Station 9. Überlebende bei Tankstelle – Interstate 84.\"");
-            Console.WriteLine("Neben dir liegt ein Schlüssel mit der Aufschrift 'Garage'.");
+            Console.WriteLine("Du erledigst den BeiÃŸer. Dann hÃ¶rst du eine Stimme im FunkgerÃ¤t:");
+            Console.WriteLine("\"Hier ist Station 9. Ãœberlebende bei Tankstelle â€“ Interstate 84.\"");
+            Console.WriteLine("Neben dir liegt ein SchlÃ¼ssel mit der Aufschrift 'Garage'.");
 
             Console.WriteLine("\nWas tust du? (Oder tippe 'exit' zum Beenden)");
-            Console.WriteLine("1. Nimm den Schlüssel und gehe zur Garage.");
-            Console.WriteLine("2. Durchsuche lieber den Keller nach Vorräten.");
+            Console.WriteLine("1. Nimm den SchlÃ¼ssel und gehe zur Garage.");
+            Console.WriteLine("2. Durchsuche lieber den Keller nach VorrÃ¤ten.");
             Console.Write("Eingabe: ");
 
             string eingabe = Console.ReadLine()?.ToLower();
@@ -109,7 +109,7 @@ namespace ExitGame
             }
             else
             {
-                Console.WriteLine("Ungültige Eingabe.");
+                Console.WriteLine("UngÃ¼ltige Eingabe.");
                 Funkkontakt();
             }
         }
@@ -121,7 +121,7 @@ namespace ExitGame
             Console.WriteLine("                        Keller                        ");
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("Im Keller ist es kalt, finster und modrig.");
-            Console.WriteLine("Du findest keine Vorräte – aber hungrige Gestalten...");
+            Console.WriteLine("Du findest keine VorrÃ¤te â€“ aber hungrige Gestalten...");
             Console.WriteLine("Du bist Tod!");
             Console.ReadKey();
             return;
@@ -133,12 +133,12 @@ namespace ExitGame
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                        Garage                        ");
             Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Der Truck ist alt, aber anscheinend fahrtüchtig.");
-            Console.WriteLine("Eine Horde nähert sich – du musst schnell handeln!");
+            Console.WriteLine("Der Truck ist alt, aber anscheinend fahrtÃ¼chtig.");
+            Console.WriteLine("Eine Horde nÃ¤hert sich â€“ du musst schnell handeln!");
             Console.WriteLine("\nWas tust du? (Oder tippe 'exit' zum Beenden)");
             Console.WriteLine("1. Starte den Motor und fahr sofort los.");
             Console.WriteLine("2. Verstecke dich mit Joel im Fahrzeug.");
-            Console.WriteLine("3. Blockiere die Tür mit einem Feuerlöscher und bereite die Flucht vor.");
+            Console.WriteLine("3. Blockiere die TÃ¼r mit einem FeuerlÃ¶scher und bereite die Flucht vor.");
             Console.Write("Eingabe: ");
 
             string eingabe = Console.ReadLine()?.ToLower();
@@ -146,7 +146,7 @@ namespace ExitGame
 
             if (eingabe == "1" || eingabe == "2")
             {
-                Console.WriteLine("Die Horde durchbricht das Tor und überrennt euch.");
+                Console.WriteLine("Die Horde durchbricht das Tor und Ã¼berrennt euch.");
                 Console.WriteLine("Du bist Tod!");
                 Console.ReadKey();
                 return;
@@ -157,25 +157,25 @@ namespace ExitGame
                 Console.WriteLine("------------------------------------------------------");
                 Console.WriteLine("                      FINALE SZENE                    ");
                 Console.WriteLine("------------------------------------------------------");
-                Console.WriteLine("Du blockierst die Tür und startest den Truck im letzten Moment.");
-                Console.WriteLine("Rick fährt, Joel feuert aus dem Fenster – ihr brecht durch das Tor.");
-                Console.WriteLine("Die Horde bleibt zurück, das Funkgerät rauscht noch immer.");
-                Console.WriteLine("\nDie Straße vor euch ist leer. Die Welt ist zerstört – aber ihr lebt.");
+                Console.WriteLine("Du blockierst die TÃ¼r und startest den Truck im letzten Moment.");
+                Console.WriteLine("Rick fÃ¤hrt, Joel feuert aus dem Fenster â€“ ihr brecht durch das Tor.");
+                Console.WriteLine("Die Horde bleibt zurÃ¼ck, das FunkgerÃ¤t rauscht noch immer.");
+                Console.WriteLine("\nDie StraÃŸe vor euch ist leer. Die Welt ist zerstÃ¶rt â€“ aber ihr lebt.");
                 Console.WriteLine("Vielleicht... ist das der Anfang von etwas Neuem.");
 
                 Thread.Sleep(10000); // 10 Sekunden warten
 
                 Console.Clear();
                 Console.WriteLine("\n----------------------------------------------------");
-                Console.WriteLine("               DU HAST DAS SPIEL BEWÄLTIGT!           ");
-                Console.WriteLine("           Rick & Joel haben überlebt – fürs Erste.   ");
+                Console.WriteLine("               DU HAST DAS SPIEL BEWÃ„LTIGT!           ");
+                Console.WriteLine("           Rick & Joel haben Ã¼berlebt â€“ fÃ¼rs Erste.   ");
                 Console.WriteLine("------------------------------------------------------");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
             else
             {
-                Console.WriteLine("Ungültige Eingabe.");
+                Console.WriteLine("UngÃ¼ltige Eingabe.");
                 Garage();
             }
         }

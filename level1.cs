@@ -8,7 +8,7 @@ namespace ExitGame
         {
             string eingabe;
             // Beispiel für das erste Level
-            //Console.Clear();
+            
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("                     LEVEL 1: Die Polizeiwache        ");
             Console.WriteLine("------------------------------------------------------");
@@ -34,6 +34,8 @@ namespace ExitGame
                 Console.WriteLine("Du bist Tod!");
                 Console.WriteLine("Drücke eine taste um ins Hauptmeü zurückzukehren");
                 Console.ReadKey();
+
+
                 // Zurück ins Hauptmenü
                 startmenue.Execute(); // Menü erneut anzeigen
             }
@@ -62,8 +64,8 @@ namespace ExitGame
                 Console.WriteLine("Du bist Tod!");
                 Console.WriteLine("Drücke eine taste um ins Hauptmeü zurückzukehren");
                 Console.ReadKey();
-                // Zurück ins Hauptmenü
-                startmenue.Execute(); // Menü erneut anzeigen
+                
+                startmenue.Execute(); 
             }
             else if (eingabe == "2")
             {
@@ -79,6 +81,7 @@ namespace ExitGame
             Console.ReadKey();
         Auswahl3:
             Console.Clear();
+
             Console.WriteLine("Rick Grimes rennt zur Waffenkammer, nur um 3 seiner Kollegen zu sehen, die leblos herumstreunern. In ihren Augen war der Tod geschrieben.\nAber sie kommen nicht durch die Gittertür an ihn ran.\nEr überlegt, wie er an die Waffen kommt.");
             Console.WriteLine("Er überlegt:");
             Console.WriteLine("1: Seine Waffe abfeuern");
@@ -99,7 +102,9 @@ namespace ExitGame
             {
                 Console.WriteLine("Rick Grimes entscheidet sich, seine Kugeln zu sparen und versucht, die Zombies mit seiner puren männlichen Kraft zu erschlagen.");
 
-                // ------------------- KAMPF 1 -------------------
+
+
+                //Kampf
                 Console.WriteLine("Ein Zombie springt aus dem Schatten auf Rick Grimes zu!");
                 Console.WriteLine("Du musst schnell reagieren und 'A' drücken, um ihn abzuwehren!");
                 Console.WriteLine("Du hast 3 Sekunden Zeit!");
@@ -139,8 +144,6 @@ namespace ExitGame
                     Console.ReadKey();
                     return;
                 }
-
-                // ------------------- KAMPF 2 -------------------
                 Console.Clear();
                 tasteGedrueckt = false;
                 Console.WriteLine("Ein weiterer Zombie versucht Rick Grimes von hinten anzugreifen.");
@@ -192,7 +195,12 @@ namespace ExitGame
                 goto Auswahl3;
             }
 
-            // Gemeinsame Fortsetzung nach beiden Pfaden
+
+
+
+
+
+           
             Console.WriteLine("Rick Grimes erstarrt und weiß nicht, was er tun soll.");
             Console.WriteLine("Auf einmal packt ihn ein Mann und sperrt sich mit ihm in die Waffenkammer.");
             Console.WriteLine("Drücke eine beliebige Taste, um fortzufahren...");
@@ -295,6 +303,10 @@ namespace ExitGame
 
             Console.WriteLine("Als der weg sicher war bahnten sich beide auf den weg zum Krankenhaus");
 
+
+
+
+            //Weiterleitung ins nächste level
             Console.WriteLine("Du bist dabei level 2 zu betreten !Möchtest du weitermachen?");
             Console.WriteLine("1: Den Alptraum weiterspielen (HORROR)");
             Console.WriteLine("2: Auföhren (Angsthase)");
@@ -312,7 +324,6 @@ namespace ExitGame
                     Console.WriteLine("Feigling!");
                     Console.WriteLine("Drücke eine taste um ins Hauptmeü zurückzukehren");
                     Console.ReadKey();
-                    // Zurück ins Hauptmenü
                     startmenue.Execute();
 
                 }

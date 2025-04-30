@@ -20,16 +20,16 @@ namespace ExitGame
             // Erste Entscheidung
             Console.WriteLine("Der aufzug hat dich und Joel in einer Bahnhaltestelle");
             Console.WriteLine("abegelassen, eine verlassene Bahnhaltestelle.");
-            Console.WriteLine("Während ihr die Bahnhaltestelle durchsucht merkt ihr das eine");
+            Console.WriteLine("WÃ¤hrend ihr die Bahnhaltestelle durchsucht merkt ihr das eine");
             Console.WriteLine("Einsturzgefahr besteht, Sei achtsam.");
-            Console.WriteLine("Du weißt das 2 Straßen weiter die schule auf euch wartet, die Schule, sie " +
-                "wäre ein sicherer ort als die bahnhaltestelle.\n(Tippe Exit ein um das Spiel zu beenden");
+            Console.WriteLine("Du weiÃŸt das 2 StraÃŸen weiter die schule auf euch wartet, die Schule, sie " +
+                "wÃ¤re ein sicherer ort als die bahnhaltestelle.\n(Tippe Exit ein um das Spiel zu beenden");
             string entscheidung1 = Console.ReadLine()?.ToLower();
             if (entscheidung1 == "exit") Environment.Exit(0);
 
-            if (entscheidung1.ToLower() == "brücke")
+            if (entscheidung1.ToLower() == "brÃ¼cke")
             {
-                Console.WriteLine("Du hast die Brücke gewählt und gehst in Richtung der Sicherheit. Du hast gewonnen!");
+                Console.WriteLine("Du hast die BrÃ¼cke gewÃ¤hlt und gehst in Richtung der Sicherheit. Du hast gewonnen!");
                 Console.ReadKey();
                 level4.Execute();
             }
@@ -37,36 +37,36 @@ namespace ExitGame
             {
                 // Zweite Entscheidung im Tunnel
                 Console.WriteLine("Du hast den Tunnel betreten, und es wird immer dunkler.");
-                Console.WriteLine("Am Ende des Tunnels siehst du zwei Türen.");
-                Console.WriteLine("Eine führt nach draußen, die andere führt zu einer dunklen Höhle.");
-                Console.WriteLine("Welche Tür wählst du? (Tür 1 oder Tür 2)\n(Tippe Exit ein um das Spiel zu beenden");
+                Console.WriteLine("Am Ende des Tunnels siehst du zwei TÃ¼ren.");
+                Console.WriteLine("Eine fÃ¼hrt nach drauÃŸen, die andere fÃ¼hrt zu einer dunklen HÃ¶hle.");
+                Console.WriteLine("Welche TÃ¼r wÃ¤hlst du? (TÃ¼r 1 oder TÃ¼r 2)\n(Tippe Exit ein um das Spiel zu beenden");
                 string entscheidung2 = Console.ReadLine()?.ToLower();
 
                 if (entscheidung2 == "exit") Environment.Exit(0);
 
                 if (entscheidung2 == "1")
                 {
-                    Console.WriteLine("Du gehst durch Tür 1 und findest den Ausgang. Du hast Überlebt fürs erste");
+                    Console.WriteLine("Du gehst durch TÃ¼r 1 und findest den Ausgang. Du hast Ãœberlebt fÃ¼rs erste");
                     Console.ReadKey();
                     level4.Execute();
                 }
                 else if (entscheidung2 == "2")
                 {
-                    Console.WriteLine("Tür 2 führt dich in eine dunkle Höhle. Du bist gefangen und stirbst. Game Over.");
+                    Console.WriteLine("TÃ¼r 2 fÃ¼hrt dich in eine dunkle HÃ¶hle. Du bist gefangen und stirbst. Game Over.");
                     Console.ReadKey();
                     startmenue.Execute();
 
                 }
                 else
                 {
-                    Console.WriteLine("Ungültige Entscheidung. Du bleibst im Tunnel gefangen. Game Over.");
+                    Console.WriteLine("UngÃ¼ltige Entscheidung. Du bleibst im Tunnel gefangen. Game Over.");
                     Console.ReadKey();
                     startmenue.Execute();
                 }
             }
             else
             {
-                Console.WriteLine("Ungültige Wahl. Du musst entweder die Brücke oder den Tunnel wählen. Game Over.");
+                Console.WriteLine("UngÃ¼ltige Wahl. Du musst entweder die BrÃ¼cke oder den Tunnel wÃ¤hlen. Game Over.");
                 Console.ReadKey();
                 startmenue.Execute();
             }
